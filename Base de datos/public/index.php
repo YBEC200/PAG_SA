@@ -78,7 +78,7 @@
 										<form class="row g-3">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Correo Electrónico</label>
-												<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@gmail.com">
+												<input type="email" class="form-control" id="inputEmailAddress" placeholder="examplegit@gmail.com">
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Contraseña</label>
