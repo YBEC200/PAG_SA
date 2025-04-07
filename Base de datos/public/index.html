@@ -78,12 +78,12 @@
 										<form class="row g-3">
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label">Correo Electrónico</label>
-												<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@gmail.com">
+												<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@gmail.com" required>
 											</div>
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Contraseña</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="******"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="******" required> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
 											<div class="col-md-6">
@@ -93,29 +93,16 @@
 												</div>
 											</div>
 											<div class="col-md-6 text-end">
-												<a href="Recuperar-Contraseña.html" class="link-style">¿Olvidaste tu contraseña?</a>
+												<a href="../resources/views/admin/Recuperar-Contraseña.html" class="link-style">¿Olvidaste tu contraseña?</a>
 											</div>
 											<div class="col-12">
 												<div class="d-grid">
-													<button type="submit" class="btn btn-primary" onclick="window.location.href='Resumen-de-ventas.html'">Iniciar sesión</button>
+													<button type="submit" class="btn btn-primary">Iniciar sesión</button>
 												</div>
+												<div id="error-message" style="color: red; display: none; margin-top: 10px; text-align: center;"></div> <!-- Mensaje de error -->
 											</div>											
-											<div class="col-12">
-												<div class="text-center">
-													<p class="mb-0">¿No tienes cuenta aún? <a href="Registrarse.html" class="link-style">Regístrate aquí</a></p>
-												</div>
-											</div>
 										</form>
 									</div>
-									<div class="login-separater text-center mb-5"> <span>O INICIA SESIÓN CON</span>
-										<hr />
-									</div>
-									<div class="list-inline contacts-social text-center">
-										<a href="javascript:;" class="google-btn list-inline-item text-white border-0 rounded-3">
-											<i class="bx bxl-google"></i> Ingresar con Google
-										</a>
-									</div>									
-
 								</div>
 							</div>
 						</div>
@@ -152,7 +139,27 @@
 	</script>
 	<!-- App JS -->
 	<script src="assets/js/app.js"></script>
-	
+	<!-- Validar usuario -->
+	<script>
+        $(document).ready(function () {
+			function validarFormulario() {
+				var correo = $("#inputEmailAddress").val();
+				var contrasena = $("#inputChoosePassword").val();
+				var errorMessage = $("#error-message");
+				if (correo === "example@gmail.com" && contrasena === "123") {
+					window.location.href = '../resources/views/admin/Analisis-Ventas.html';
+				} else {
+					errorMessage.text("Correo electrónico y/o contraseña incorrectos.");
+					errorMessage.show();
+				}
+			}
+			// Asignar la función validarFormulario al evento click del botón "Iniciar sesión"
+			$("button[type='submit']").click(function(event) {
+				event.preventDefault(); // Evitar el envío del formulario por defecto
+				validarFormulario();
+			});
+		});
+    </script>
 </body>
 
 </html>

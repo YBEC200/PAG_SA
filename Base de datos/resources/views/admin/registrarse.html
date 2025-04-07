@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Favicon -->
+	<link rel="icon" href="assets/images/logotipo.png" type="image/png"/>
+	<!-- Plugins -->
+	<link href="assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
+	<link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
+	<link href="assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!-- Loader -->
+	<link href="assets/css/pace.min.css" rel="stylesheet" />
+	<script src="assets/js/pace.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/css/bootstrap-extended.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/icons.css" rel="stylesheet">
+	<title>Registrarse - Administrador Botica San Antonio</title>
+	<style>
+		/* Fondo borroso */
+		.background {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url('assets/images/fondo-2.jpg');
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			filter: blur(11px); /* Desenfoque aplicado al fondo */
+			z-index: 1;
+			
+		}
+
+		.wrapper {
+    		position: relative;
+			z-index: 2; /* Contenido sobre el fondo borroso */
+			max-height: 100vh; /* Establece una altura máxima para el contenedor */
+			overflow-y: auto; /* Permite el desplazamiento si el contenido es más grande que la altura */
+			overflow-x: hidden !important;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100vh;
+			overflow-x: hidden; 
+			overflow-y: auto; 
+		}
+
+
+		.container-fluid {
+			padding: 0 10px; /* Añadir algo de padding para que el contenido no quede pegado a los bordes */
+		}
+
+		.card-body {
+			padding: 1px !important;
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<!-- Fondo borroso -->
+	<div class="background"></div>
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+		<div class="d-flex align-items-center justify-content-center my-5">
+			<div class="container-fluid">
+				<div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
+					<div class="col mx-auto">
+						<div class="card mb-0">
+							<div class="card-body">
+								<div class="p-4">
+									<!-- Logo de Botica San Antonio -->
+									<div class="mb-3 text-center">
+										<img src="assets/images/logotipo.png" width="90" alt="Logo Botica San Antonio" />
+									</div>
+									<div class="text-center mb-4">
+										<h5>Administrador</h5>
+										<p class="mb-0">Por favor, complete los siguientes detalles para crear su cuenta</p>
+									</div>
+									<div class="form-body">
+										<form class="row g-3">
+											<div class="col-12">
+												<label for="inputUsername" class="form-label">Nombre de usuario</label>
+												<input type="text" class="form-control" id="inputUsername" placeholder="Jhon">
+											</div>
+											<div class="col-12">
+												<label for="inputEmailAddress" class="form-label">Correo electrónico</label>
+												<input type="email" class="form-control" id="inputEmailAddress" placeholder="brayan@gmail.com">
+											</div>
+											<div class="col-12">
+												<label for="inputChoosePassword" class="form-label">Contraseña</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="Ingrese contraseña"> 
+													<a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+												</div>
+											</div>
+											<div class="col-12">
+												<label for="inputConfirmPassword" class="form-label">Confirmar contraseña</label>
+												<div class="input-group" id="show_hide_password">
+													<input type="password" class="form-control border-end-0" id="inputChoosePassword" placeholder="Confirme su contraseña"> 
+													<a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+												</div>											
+											</div>
+											<div class="col-12">
+												<div class="form-check form-switch">
+													<input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked">
+													<label class="form-check-label" for="flexSwitchCheckChecked">He leído y acepto los Términos y Condiciones</label>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="d-grid">
+													<button type="submit" class="btn btn-primary">Registrarse</button>
+												</div>
+											</div>
+											<div class="col-12">
+												<div class="text-center">
+													<p class="mb-0">¿Ya tienes una cuenta? <a href="authentication-signin.html">Inicia sesión aquí</a></p>
+												</div>
+											</div>
+										</form>
+									</div>
+									<div class="login-separater text-center mb-4"> <span>O REGÍSTRATE CON</span>
+										<hr />
+									</div>
+									<div class="list-inline contacts-social text-center">
+										<a href="javascript:;" class="google-btn list-inline-item text-white border-0 rounded-3">
+											<i class="bx bxl-google"></i> Ingresar con Google
+										</a>
+									</div>	
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS -->
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<!-- Plugins -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
+	<script src="assets/plugins/metismenu/js/metisMenu.min.js"></script>
+	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+	<!-- Mostrar y ocultar contraseña -->
+	<script>
+		$(document).ready(function () {
+			$("#show_hide_password a").on('click', function (event) {
+				event.preventDefault();
+				if ($('#show_hide_password input').attr("type") == "text") {
+					$('#show_hide_password input').attr('type', 'password');
+					$('#show_hide_password i').addClass("bx-hide");
+					$('#show_hide_password i').removeClass("bx-show");
+				} else if ($('#show_hide_password input').attr("type") == "password") {
+					$('#show_hide_password input').attr('type', 'text');
+					$('#show_hide_password i').removeClass("bx-hide");
+					$('#show_hide_password i').addClass("bx-show");
+				}
+			});
+		});
+	</script>
+	<!-- App JS -->
+	<script src="assets/js/app.js"></script>
+</body>
+
+</html>
