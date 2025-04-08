@@ -92,9 +92,9 @@
 													<label class="form-check-label" for="flexSwitchCheckChecked">Recuérdame</label>
 												</div>
 											</div>
-											<div class="col-md-6 text-end">
+											<!--<div class="col-md-6 text-end">
 												<a href="../resources/views/admin/Recuperar-Contraseña.html" class="link-style">¿Olvidaste tu contraseña?</a>
-											</div>
+											</div>-->
 											<div class="col-12">
 												<div class="d-grid">
 													<button type="submit" class="btn btn-primary">Iniciar sesión</button>
@@ -146,8 +146,8 @@
 				var correo = $("#inputEmailAddress").val();
 				var contrasena = $("#inputChoosePassword").val();
 				var errorMessage = $("#error-message");
-				if (correo === "example@gmail.com" && contrasena === "123") {
-					window.location.href = '../resources/views/admin/Analisis-Ventas.html';
+				if (correo === "admin@example.com" && contrasena === "123") {
+					window.location.href = '../resources/views/admin/Gestion-Pedidos.php';
 				} else {
 					errorMessage.text("Correo electrónico y/o contraseña incorrectos.");
 					errorMessage.show();
